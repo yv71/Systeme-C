@@ -22,6 +22,12 @@ int placementJoueur(char tab[10][10], Bateau batJ[5]){
 		paJ1.nbCases = X;
 		printf("%d\n", paJ1.nbCases);
 	}
-	
+	int Y = 0;
+	while (Y<1 || Y>10){
+		printf("Coordonnée Y (lettre) : ");
+		scanf("%d",&Y);
+		printf("%d", Y);
+		Y = Y - 64;
+	}
 	return 0;
 }
