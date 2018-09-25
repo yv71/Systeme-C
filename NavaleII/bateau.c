@@ -3,10 +3,9 @@
 #include "bateau.h"
 
 
-int placementJoueur(char tab[10][10], Bateau batJ[5]){
+int placementJoueur(char** tab, Bateau* batJ){
 	printf("Placement du porte-avion\n");
-	Bateau paJ1;
-	batJ[0] = paJ1;
+	batJ[0] = NULL;
 	paJ1.nbCases = 5;
 	int X = 0;
 	while (X<1 || X>10){

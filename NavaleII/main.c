@@ -25,10 +25,8 @@ int main(int argc, char * argv[]){
 		affichage(j1,j2,nb);
 	}
 	else {
-		char** j1; //La première entrée correspond aux ordonnées (lettres) et la deuxième aux abscisses
-		char** j2;
 		Bateau batJ1[5];
-		int nb=10;
+		nb=10;
 			for (int i = 0; i < 10; i++){
 				j1[i]=calloc(nb,sizeof(**j1));
 				j2[i]=calloc(nb,sizeof(**j2));
@@ -43,6 +41,12 @@ int main(int argc, char * argv[]){
 	
 	//affichage(j1, j2);
 	//placementJoueur(j1, batJ1);
+	for(int i=0;i<nb;i++){
+		free(j1[i]);
+		free(j2[i]);
+	}
+	free(j1);
+	free(j2);
 	return 0;
 }
 

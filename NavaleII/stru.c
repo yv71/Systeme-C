@@ -5,5 +5,5 @@ struct Bateau{
 	//char nom[20];
 	int nbCases;
 	int X;
-	int Y;	
+	int Y;
 };
