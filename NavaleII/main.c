@@ -9,8 +9,8 @@
 int main(int argc, char * argv[]){
 	char** j1;
 	char** j2;
-	if (argc > 1){
-		int nb = atoi(argv[1]);
+	int nb = atoi(argv[1]);
+	if (argc > 1 && nb < 27 ){		
 		j1=calloc(nb, sizeof(*j1)); //La première entrée correspond aux ordonnées (lettres) et la deuxième aux abscisses
 		j2=calloc(nb, sizeof(*j2));
 		Bateau batJ1[5];
@@ -22,6 +22,7 @@ int main(int argc, char * argv[]){
 					j2[i][j] = '~';
 				}		
 		}
+		affichage(j1,j2,nb);
 	}
 	else {
 		char** j1; //La première entrée correspond aux ordonnées (lettres) et la deuxième aux abscisses
@@ -36,6 +37,7 @@ int main(int argc, char * argv[]){
 					j2[i][j] = '~';
 				}		
 		}
+		affichage(j1,j2,10);
 	}
 
 	
