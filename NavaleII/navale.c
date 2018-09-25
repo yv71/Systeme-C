@@ -2,7 +2,7 @@
 #include "navale.h"
 //□
 
-int affichage(char tab[10][10], char tab2[10][10])
+int affichage(char** tab, char** tab2)
 {
 	printf("  ");
 	for (int i = 1; i <= 10; i++){
